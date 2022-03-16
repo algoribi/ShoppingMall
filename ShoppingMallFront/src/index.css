@@ -41,7 +41,6 @@ body {
     box-shadow: 1px 1px 1px rgb(79, 99, 212),
     2px 2px 1px rgb(124, 105, 144);
     cursor: pointer;
-
 }
 
 .home_button {
@@ -65,10 +64,17 @@ body {
 }
 
 .product_box {
-    margin: 50px;
+    margin: 40px;
     height: 410px;
     width: 230px;
+    padding: 10px;
     word-wrap: break-word;
+}
+
+.product_box:hover {
+    /* border: 2px solid; */
+    background-color:  rgb(225, 232, 255);
+    border-color: rgb(168, 199, 235);
 }
 
 .product_name {
@@ -78,4 +84,50 @@ body {
 .product_price {
     font-size: 18px;
     margin-top: 20px;
+}
+
+.page_title {
+    width: 100vw;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.cart_product_box {
+    margin: 100px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.cart_img {
+    height: 100px;
+    width: 100px;
+}
+
+.cart_name {
+    width: 350px;
+    word-wrap: break-word;
+}
+
+.product_delete_button {
+    font-size: 15px;
+    margin-left: 15px;
+    background-color: rgba(150, 172, 199, 0.452);
+    border-radius: 7px;
+    width: 80px;
+    height: 38px;
+    box-shadow: 1px 1px 1px rgb(79, 99, 212),
+    2px 2px 1px rgb(124, 105, 144);
+    cursor: pointer;
+}
+
+.total_price {
+    font-size: 23px;
+    font-weight: bolder;
+    text-align: center;
+    width: 100vw;
+    margin-top: 100px;
+    margin-bottom: 100px;
 }

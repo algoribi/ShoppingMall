@@ -1,21 +1,32 @@
+import React from 'react';
 import products from '../db/products.json';
+import { ProductType } from 'types';
 
-export default function PrintProductPage() {
+interface Props {
+    cartList : ProductType[];
+    addProduct : (value : ProductType) => void;
+}
 
-    const productClick = () => {
-        // css 마우스 대면 박스 테두리 보이는 이벤트
-        // 클릭하면 alert -> 장바구니에 담으시겠습니까?
-    }
+export default function PrintProductPage(props : Props) {
 
     return (
+        <>
+        <p className='page_title'>상품목록</p>
         <div className='products'>
             {products.map(product => (
-                <div className='product_box' key={product.productCode} onClick={productClick}>
-                    <img className='product_img' src={`/images/${product.productCode}.jpg`} />
+                <div className='product_box' key={product.productCode}
+                    onClick={() => props.addProduct({
+                        productCode : product.productCode,
+                        name : product.name,
+                        price : product.price,
+                        productCount : 1
+                    })}>
+                    <img className='product_img' src={`/images/${product.productCode}.jpg`} alt={`${product.productCode}_img`} />
                     <p className='product_name'>{product.name}</p>
                     <p className='product_price'>{product.price.toLocaleString()} 원</p>
                 </div>
             ))}
         </div>
+        </>
     );
 }
