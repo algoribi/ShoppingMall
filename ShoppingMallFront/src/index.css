@@ -11,6 +11,18 @@ body {
     align-items: center;
 }
 
+.button {
+    font-size: 18px;
+    margin-left: 15px;
+    border-radius: 7px;
+    width: 100px;
+    height: 38px;
+    cursor: pointer;
+    background-color: rgb(168, 199, 235);
+    box-shadow: 1px 1px 1px rgb(79, 99, 212),
+    2px 2px 1px rgb(124, 105, 144);
+}
+
 .title_name {
     font-size: 50px;
     text-shadow: 1px 1px 1px rgb(45, 25, 90),
@@ -29,30 +41,6 @@ body {
 .home_button::after {
     content: "Home";
 
-}
-
-.cart_button {
-    font-size: 18px;
-    margin-left: 15px;
-    background-color: rgb(168, 199, 235);
-    border-radius: 7px;
-    width: 100px;
-    height: 38px;
-    box-shadow: 1px 1px 1px rgb(79, 99, 212),
-    2px 2px 1px rgb(124, 105, 144);
-    cursor: pointer;
-}
-
-.home_button {
-    font-size: 18px;
-    margin-left: 15px;
-    background-color: rgb(168, 199, 235);
-    border-radius: 7px;
-    width: 100px;
-    height: 38px;
-    box-shadow: 1px 1px 1px rgb(79, 99, 212),
-    2px 2px 1px rgb(124, 105, 144);
-    cursor: pointer;
 }
 
 .products {
@@ -130,4 +118,47 @@ body {
     width: 100vw;
     margin-top: 100px;
     margin-bottom: 100px;
+}
+
+.non_box {
+    display: none;
+}
+
+.modal_box {
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background:rgba(0, 0, 0, .5);
+    font-size:0;
+    text-align:center;
+}
+
+.modal_message_box {
+    width: 400px;
+    height: 150px;
+    border: 2px solid rgba(55, 56, 126, 0.452);
+    display:inline-block;
+    padding:20px 30px;
+    position: absolute;
+    top:40%;
+    left: 50%;
+    margin: -250px 0 0 -250px;
+    background:rgb(228, 239, 251);
+    font-size:15px;
+}
+
+.modal_button {
+    font-size: 18px;
+    width: 90px;
+    height: 38px;
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.modal_text {
+    font-size: 25px;
+    font-weight: bold;
 }
