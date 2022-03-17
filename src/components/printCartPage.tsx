@@ -1,9 +1,8 @@
-import React from 'react';
 import { ProductType } from 'types';
 
 interface Props {
     cartList : ProductType[];
-    deleteCartProduct : (productCode : string, name : string) => void;
+    deleteCartProduct : (productCode : ProductType) => void;
 }
 
 export default function PrintCartPage(props : Props) {
@@ -25,7 +24,7 @@ export default function PrintCartPage(props : Props) {
                         <p className='cart_name'>{product.name}</p>
                         <p className='cart_counter'>{product.productCount} 개 </p>
                         <p className='cart_price'>{(product.price * product.productCount).toLocaleString()} 원</p>
-                        <button  className='product_delete_button' onClick={() => props.deleteCartProduct(product.productCode, product.name)}>삭제</button>
+                        <button  className='product_delete_button' onClick={() => props.deleteCartProduct(product)}>삭제</button>
                     </div>
                 ))}
             </div>
